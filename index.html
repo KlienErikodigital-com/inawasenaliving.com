@@ -269,20 +269,60 @@ flexibility(document.documentElement);
 		<div class="elementor-element elementor-element-b9d8fe4 e-con-full e-flex e-con e-child" data-id="b9d8fe4" data-element_type="container">
 				<div class="elementor-element elementor-element-2e3d4d7 elementor-widget elementor-widget-wpforms" data-id="2e3d4d7" data-element_type="widget" data-widget_type="wpforms.default">
 				<div class="elementor-widget-container">
-					<div class="wpforms-container inline-fields" id="wpforms-12"><form id="wpforms-form-12" class="wpforms-validate wpforms-form" data-formid="12" method="post" enctype="multipart/form-data" action="https://wa.link/iold4l" data-token="ef76f784d6ed24e1a2bb7df4c180d90d" data-token-time="1744168892">
-<noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript>
-<div class="wpforms-field-container">
-<div id="wpforms-12-field_0-container" class="wpforms-field wpforms-field-name" data-field-id="0">
-<label class="wpforms-field-label wpforms-label-hide" for="wpforms-12-field_0">Name <span class="wpforms-required-label">*</span></label><input type="text" id="wpforms-12-field_0" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][0]" placeholder="Enter your full name" required>
-</div>
-<div id="wpforms-12-field_4-container" class="wpforms-field wpforms-field-text" data-field-id="4">
-<label class="wpforms-field-label wpforms-label-hide" for="wpforms-12-field_4">Phone number</label><input type="text" id="wpforms-12-field_4" class="wpforms-field-medium" name="wpforms[fields][4]" placeholder="Phone number">
-</div>
-</div>
-<!-- .wpforms-field-container --><div class="wpforms-submit-container">
-<input type="hidden" name="wpforms[id]" value="12"><input type="hidden" name="page_title" value="Home"><input type="hidden" name="page_url" value="https://wa.link/iold4l"><input type="hidden" name="url_referer" value=""><input type="hidden" name="page_id" value="6"><input type="hidden" name="wpforms[post_id]" value="6"><button type="submit" name="wpforms[submit]" id="wpforms-submit-12" class="wpforms-submit" data-alt-text="Sending..." data-submit-text="Send" aria-live="assertive" value="wpforms-submit">Send</button>
-</div>
-</form></div>  <!-- .wpforms-container -->				</div>
+					<div class="wpforms-container inline-fields" id="wpforms-12"><form id="wpforms-form-12" class="wpforms-validate wpforms-form" data-formid="12" method="post" enctype="multipart/form-data" action="/?simply_static_page=1" data-token="ef76f784d6ed24e1a2bb7df4c180d90d" data-token-time="1744168892">
+						<noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript>
+						
+						<div class="wpforms-field-container">
+						  <div id="wpforms-12-field_0-container" class="wpforms-field wpforms-field-name" data-field-id="0">
+							<label class="wpforms-field-label wpforms-label-hide" for="wpforms-12-field_0">Name <span class="wpforms-required-label">*</span></label>
+							<input type="text" id="wpforms-12-field_0" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][0]" placeholder="Enter your full name" required>
+						  </div>
+						  <div id="wpforms-12-field_4-container" class="wpforms-field wpforms-field-text" data-field-id="4">
+							<label class="wpforms-field-label wpforms-label-hide" for="wpforms-12-field_4">Phone number</label>
+							<input type="text" id="wpforms-12-field_4" class="wpforms-field-medium" name="wpforms[fields][4]" placeholder="Phone number">
+						  </div>
+						</div>
+					  
+						<div class="wpforms-submit-container">
+						  <input type="hidden" name="wpforms[id]" value="12">
+						  <input type="hidden" name="page_title" value="Home">
+						  <input type="hidden" name="page_url" value="/?simply_static_page=1">
+						  <input type="hidden" name="url_referer" value="">
+						  <input type="hidden" name="page_id" value="6">
+						  <input type="hidden" name="wpforms[post_id]" value="6">
+						  <button type="submit" name="wpforms[submit]" id="wpforms-submit-12" class="wpforms-submit" data-alt-text="Sending..." data-submit-text="Send" aria-live="assertive" value="wpforms-submit">Send</button>
+						</div>
+					  </form>
+					  
+					  <script>
+					  document.getElementById('wpforms-form-12').addEventListener('submit', function(e) {
+						e.preventDefault(); // Mencegah form dikirim ke server
+					  
+						// Ambil data dari input form
+						var name = document.getElementById('wpforms-12-field_0').value.trim();
+						var phone = document.getElementById('wpforms-12-field_4').value.trim();
+					  
+						// Validasi sederhana
+						if (!name || !phone) {
+						  alert("Mohon lengkapi nama dan nomor telepon.");
+						  return;
+						}
+					  
+						// Buat pesan yang dikirim ke WhatsApp
+						var message = `Halo, saya ${name}, nomor HP saya ${phone}, saya ingin konsultasi gratis.`;
+						var encodedMessage = encodeURIComponent(message);
+						
+						// Gunakan link wa.me dengan pesan
+						var waLink = `https://wa.link/iold4l`; // Ganti dengan nomor WA tujuan
+					  
+						// Jika ingin tetap pakai link statis, tinggal ganti baris di atas dengan:
+						// var waLink = 'https://wa.link/iold4l';
+					  
+						// Buka WhatsApp di tab baru
+						window.open(waLink, '_blank');
+					  });
+					  </script>
+					  </div>  <!-- .wpforms-container -->				</div>
 				</div>
 				</div>
 					</div>
